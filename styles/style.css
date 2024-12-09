@@ -35,7 +35,7 @@
 
 .header__logo {
   text-transform: uppercase;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--font-weight-title);
   font-size: var(--font-size);
   text-decoration: none;
@@ -43,7 +43,7 @@
 
 .header__title {
   text-transform: uppercase;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--font-weight-text);
   font-size: var(--font-size-text);
   line-height: 1em;
@@ -114,7 +114,7 @@ img {
   top: 28px;
   right: 26px;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   font-weight: var(--font-weight-text);
   mix-blend-mode: hard-light;
@@ -139,15 +139,16 @@ img {
 
 .card__name {
   text-align: left;
-  font-family: var(--main-font);
-  font-weight: var(--font-weight-title);
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-title);
   font-size: 18px;
   padding: 5px 12px;
   border-block-end: 2px solid var(--main-color);
 }
 
 .card__text {
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-text);
   font-size: 18px;
   padding: 27px 25px 0 25px;
 }
@@ -155,6 +156,7 @@ img {
 .card__button {
   display: flex;
   justify-content: end;
+  gap: 12px;
   margin: 27px;
   position: relative;
 }
@@ -190,7 +192,7 @@ img {
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   font-weight: var(--font-weight-text);
   color: var(--button-text-color);
@@ -275,7 +277,7 @@ img {
 }
 
 .button-save-text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   font-weight: var(--font-weight-text);
   mix-blend-mode: difference;
@@ -312,7 +314,7 @@ img {
 .modal-button {
   background-color: transparent;
   padding: 10px 66.5px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   font-weight: var(--font-weight-text);
   text-transform: uppercase;
@@ -341,7 +343,7 @@ img {
 }
 
 .modal-text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--font-weight-text);
   font-size: 14px;
   line-height: 1.5em;
