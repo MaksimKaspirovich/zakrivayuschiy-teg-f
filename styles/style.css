@@ -9,8 +9,357 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+* {
+  box-sizing: border-box;
+}
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--font-size-text);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  margin: 100px auto;
+  flex-direction: column;
+  max-inline-size: 700px;
+  padding-block: 129px;
+  border: 2px solid #000;
+}
+
+.header__logo {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size);
+  text-decoration: none;
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-weight: var(--font-weight-text);
+  font-size: var(--font-size-text);
+  line-height: 1em;
+  margin-top: 20px;
+}
+
+.main {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-inline-size: 700px;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  background-color: #fff;
+  max-inline-size: 700px;
+  overflow: clip;
+  border: 2px solid #000;
+}
+
+img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.grayscale {
+  filter: grayscale(0.75);
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.brightness {
+  filter: brightness(1.4);
+}
+
+.contrast {
+  filter: contrast(2);
+}
+
+.hue-rotate {
+filter: hue-rotate(195deg);
+}
+
+.sepia {
+  filter: sepia(0.6);
+}
+
+.mix-filter {
+  filter:blur(4px) contrast(1.5);
+}
+
+.card__image {
+  position: relative;
+  border-block-end: 2px solid var(--main-color);
+}
+
+.image-label {
+  position: absolute;
+  top: 28px;
+  right: 26px;
+  opacity: 0.5;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--font-weight-text);
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 0 0 var(--shadow-text-color), 
+  -1px 0 0 var(--shadow-text-color),
+  0 -1px 0 var(--shadow-text-color),
+  0 1px 0 var(--shadow-text-color);
+}
+
+
+@supports(text-stroke: 1px var(--shadow-text-color)) {
+  .image-label {
+    text-stroke: 1px var(--shadow-text-color);
+    text-shadow: none;
+  }
+}
+
+@supports(-webkit-text-stroke: 1px var(--shadow-text-color)) {
+  .image-label {
+  -webkit-text-stroke: 1px var(--shadow-text-color);
+  text-shadow: none;
+  }
+}
+
+.card__name {
+  text-align: left;
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-title);
+  font-size: 18px;
+  padding: 5px 12px;
+  border-block-end: 2px solid var(--main-color);
+}
+
+.card__text {
+  font-family: var(--main-font);
+  font-size: 18px;
+  padding: 27px 25px 0 25px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: end;
+  margin: 27px;
+  position: relative;
+}
+
+.button {
+  background-color: transparent;
+  block-size: 38px;
+  cursor: pointer;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+  inline-size: 130px;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button {
+  border: none;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--font-weight-text);
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.card__like-button:hover::before {
+  transform: scaleX(1);
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-color);
+  transition: border 0.3s ease;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.footer {
+  margin-block-start: 50px;
+  margin-block-end: 105px;
+  display: flex;
+  place-content: center;
+  margin: 50px auto 105px;
+}
+
+.button-save {
+  display: flex;
+  place-items: center;
+  padding: 15px 18px;
+  gap: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-save::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.button-save:hover::before {
+  transform: scaleX(1);
+}
+
+.button-save:focus {
+  outline: none;
+}
+
+.button-save:focus-visible {
+  border: 2px solid var(--main-color);
+  transition: border 0.3s ease;
+  box-shadow: 2px 2px 0 var(--main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.footer-text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--font-weight-text);
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.button-icon {
+  inline-size: 21px;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+
+.modal-disket[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  max-inline-size: 353px;
+  padding: 30px;
+}
+
+.modal-disket::backdrop {
+  opacity: 0.65;
+  background-color: #000;
+}
+
+.modal-other {
+  display: flex;
+  gap: 20px;
+  place-items: center;
+}
+
+.modal-button {
+  background-color: transparent;
+  padding: 7.5px 66.5px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--font-weight-text);
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+
+.modal-button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.modal-button:hover::before {
+  transform: scaleX(1);
+}
+
+.modal-icon {
+  max-inline-size: 39px;
+}
+
+.modal-text {
+  font-family: var(--accent-font);
+  font-weight: var(--font-weight-text);
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+body:has(.modal-disket[open]) {
+  overflow: hidden;
+}
+
+@media (width <= 375px) {
+  .button-save {
+    flex-direction: column;
+  }
+  .button-icon {
+    inline-size: 28px;
+  }
+
 }
