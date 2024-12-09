@@ -93,7 +93,7 @@ img {
 }
 
 .hue-rotate {
-filter: hue-rotate(195deg);
+  filter: hue-rotate(195deg);
 }
 
 .sepia {
@@ -101,7 +101,7 @@ filter: hue-rotate(195deg);
 }
 
 .mix-filter {
-  filter:blur(4px) contrast(1.5);
+  filter: blur(4px) contrast(1.5);
 }
 
 .card__image {
@@ -118,24 +118,22 @@ filter: hue-rotate(195deg);
   font-size: 14px;
   font-weight: var(--font-weight-text);
   mix-blend-mode: hard-light;
-  text-shadow: 1px 0 0 var(--shadow-text-color), 
-  -1px 0 0 var(--shadow-text-color),
-  0 -1px 0 var(--shadow-text-color),
-  0 1px 0 var(--shadow-text-color);
+  text-shadow: 1px 0 0 var(--shadow-text-color),
+    -1px 0 0 var(--shadow-text-color), 0 -1px 0 var(--shadow-text-color),
+    0 1px 0 var(--shadow-text-color);
 }
 
-
-@supports(text-stroke: 1px var(--shadow-text-color)) {
+@supports (text-stroke: 1px var(--shadow-text-color)) {
   .image-label {
     text-stroke: 1px var(--shadow-text-color);
     text-shadow: none;
   }
 }
 
-@supports(-webkit-text-stroke: 1px var(--shadow-text-color)) {
+@supports (-webkit-text-stroke: 1px var(--shadow-text-color)) {
   .image-label {
-  -webkit-text-stroke: 1px var(--shadow-text-color);
-  text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow-text-color);
+    text-shadow: none;
   }
 }
 
@@ -290,7 +288,6 @@ filter: hue-rotate(195deg);
   color: #fff;
 }
 
-
 .modal-disket[open] {
   display: flex;
   flex-direction: column;
@@ -361,5 +358,4 @@ body:has(.modal-disket[open]) {
   .button-icon {
     inline-size: 28px;
   }
-
 }
