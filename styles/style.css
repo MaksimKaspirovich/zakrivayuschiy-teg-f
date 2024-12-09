@@ -29,7 +29,7 @@
   margin: 100px auto;
   flex-direction: column;
   max-inline-size: 700px;
-  padding-block: 129px;
+  padding-block: 130px;
   border: 2px solid #000;
 }
 
@@ -173,6 +173,8 @@ img {
   overflow: hidden;
   position: relative;
   inline-size: 130px;
+  box-shadow: 2px 2px 0 transparent;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button:focus {
@@ -181,7 +183,6 @@ img {
 
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -214,6 +215,7 @@ img {
 
 .card__icon-button {
   border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -222,19 +224,17 @@ img {
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color);
-  transition: border 0.3s ease;
 }
 
 .heart {
   transform-origin: center;
 }
 
-.footer {
+.save {
   margin-block-start: 50px;
   margin-block-end: 105px;
   display: flex;
   place-content: center;
-  margin: 50px auto 105px;
 }
 
 .button-save {
@@ -274,7 +274,7 @@ img {
   transition: box-shadow 0.3s ease;
 }
 
-.footer-text {
+.button-save-text {
   font-family: var(--accent-font);
   font-size: 14px;
   font-weight: var(--font-weight-text);
@@ -299,7 +299,7 @@ img {
 }
 
 .modal-disket::backdrop {
-  opacity: 0.65;
+  opacity: 0.75;
   background-color: #000;
 }
 
@@ -311,7 +311,7 @@ img {
 
 .modal-button {
   background-color: transparent;
-  padding: 7.5px 66.5px;
+  padding: 10px 66.5px;
   font-family: var(--accent-font);
   font-size: 14px;
   font-weight: var(--font-weight-text);
@@ -352,6 +352,9 @@ body:has(.modal-disket[open]) {
 }
 
 @media (width <= 375px) {
+  .header {
+    padding-block: 120px;
+  }
   .button-save {
     flex-direction: column;
   }
