@@ -150,7 +150,7 @@ img {
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--font-weight-text);
   font-size: 18px;
-  padding: 27px 25px 0 25px;
+  padding: 27px 25px 0;
 }
 
 .card__button {
@@ -163,7 +163,6 @@ img {
 
 .button {
   background-color: transparent;
-  block-size: 38px;
   cursor: pointer;
 }
 
@@ -177,14 +176,16 @@ img {
   inline-size: 130px;
   box-shadow: 2px 2px 0 transparent;
   transition: box-shadow 0.3s ease;
+  block-size: 38px;
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-color);
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -199,7 +200,7 @@ img {
   mix-blend-mode: difference;
 }
 
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   background-color: var(--main-color);
@@ -211,13 +212,16 @@ img {
   transform-origin: left;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
 .card__icon-button {
   border: 2px solid transparent;
   transition: border 0.3s ease;
+  background-color: transparent;
+  block-size: 38px;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -245,35 +249,7 @@ img {
   padding: 15px 18px;
   gap: 8px;
   background-color: #fff;
-  cursor: pointer;
   position: relative;
-}
-
-.button-save::before {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  inset: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  transform-origin: left;
-}
-
-.button-save:hover::before {
-  transform: scaleX(1);
-}
-
-.button-save:focus {
-  outline: none;
-}
-
-.button-save:focus-visible {
-  border: 2px solid var(--main-color);
-  transition: border 0.3s ease;
-  box-shadow: 2px 2px 0 var(--main-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button-save-text {
