@@ -156,8 +156,8 @@ img {
 .card__button {
   display: flex;
   justify-content: end;
-  gap: 12px;
-  margin: 27px;
+  gap: 4px;
+  margin: 25px;
   position: relative;
 }
 
@@ -188,10 +188,6 @@ img {
   transition: box-shadow 0.3s ease;
 }
 
-.card__icon-button {
-  border: none;
-}
-
 .button__text {
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
@@ -217,6 +213,9 @@ img {
 }
 
 .card__icon-button {
+  display: flex;
+  place-items: center;
+  padding: 0;
   border: 2px solid transparent;
   transition: border 0.3s ease;
   background-color: transparent;
