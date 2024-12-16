@@ -29,7 +29,7 @@
   margin: 100px auto;
   flex-direction: column;
   max-inline-size: 700px;
-  padding-block: 130px;
+  padding-block: 128.5px;
   border: 2px solid #000;
 }
 
@@ -332,10 +332,17 @@ body:has(.modal-disket[open]) {
   .header {
     padding-block: 120px;
   }
+
   .button-save {
     flex-direction: column;
   }
+
   .button-icon {
     inline-size: 28px;
+  }
+
+  .image-label {
+    top: 22px;
+    right: 11px;
   }
 }
